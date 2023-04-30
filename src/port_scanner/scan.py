@@ -135,6 +135,9 @@ def scan(type):
         third_dot_index = ip.rfind(".")
         ip = ip[:third_dot_index + 1]
         ping_sweep(ip)
+    
+    else:
+        print("Invalid option")
 
 def run():
     print("Select the type of scan")  # need to handle unexpected inputs
