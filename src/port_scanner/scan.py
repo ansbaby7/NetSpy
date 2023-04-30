@@ -74,7 +74,7 @@ def ping_sweep(network_ip, num_threads=20):
 
 
 def scan(type):
-    if type == 1:
+    if type == "1":
         print("Specify the IPv4 address or hostname to scan:", end=" ")
         host = input()
         host_ip = socket.gethostbyname(host)
@@ -89,20 +89,23 @@ def scan(type):
         if end_port == "":
             end_port = 1024
         tcp_connect_scan(host_ip, int(start_port), int(end_port))
+    
+    elif type == "2":
+        pass
 
-    elif type == 3:
+    elif type == "3":
         print("Specify the network IPv4 address to scan:", end=" ")
         ip = input()
         third_dot_index = ip.rfind(".")
         ip = ip[:third_dot_index + 1]
         ping_sweep(ip)
 
+def run():
+    print("Select the type of scan")  # need to handle unexpected inputs
+    print("1 - TCP Connect Scan")
+    print("2 - TCP SYN Scan")
+    print("3 - Ping Sweep")
 
-print("Select the type of scan")  # need to handle unexpected inputs
-print("1 - TCP Connect Scan")
-print("2 - TCP SYN Scan")
-print("3 - Ping Sweep")
-
-type = int(input())
-scan(type)
+    type = input()
+    scan(type)
 
