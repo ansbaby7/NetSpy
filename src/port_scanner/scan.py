@@ -102,7 +102,7 @@ def scan(type):
         host = input()
         host_ip = socket.gethostbyname(host)
         print(host_ip)
-        print("Specify the port range to scan")  # need to handle unexpected inputs
+        print("Specify the port range to scan")
         print("Start port (if not specified, defaults to 1):", end=" ")
         start_port = input()
         if start_port == "" or start_port == 0:
@@ -114,11 +114,11 @@ def scan(type):
         tcp_connect_scan(host_ip, int(start_port), int(end_port))
     
     elif type == "2":
-        print("Specify the IPv4 address of the host to scan:", end=" ")
+        print("Specify the IPv4 address or hostname to scan:", end=" ")
         host = input()
         host_ip = socket.gethostbyname(host)
         print(host_ip)
-        print("Specify the port range to scan")  # need to handle unexpected inputs
+        print("Specify the port range to scan") 
         print("Start port (if not specified, defaults to 1):", end=" ")
         start_port = input()
         if start_port == "" or start_port == "0":
@@ -140,7 +140,7 @@ def scan(type):
         print("Invalid option")
 
 def run():
-    print("Select the type of scan")  # need to handle unexpected inputs
+    print("Select the type of scan") 
     print("1 - TCP Connect Scan")
     print("2 - TCP SYN Scan")
     print("3 - Ping Sweep")
