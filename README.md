@@ -12,7 +12,7 @@
 
 - Clone the project repository by running
   
-    `git clone [https://github.com/ansbaby7/NetSpy.git (https://github.com/ansbaby7/NetSpy.git)`
+    `git clone https://github.com/ansbaby7/NetSpy.git`
   
     [Note: You need to have git installed to run this command]
 
