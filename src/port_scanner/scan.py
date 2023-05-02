@@ -107,7 +107,7 @@ def scan(type):
         start_port = input()
         if start_port == "" or start_port == 0:
             start_port = 1
-        print("End_port (if not specified, defaults to 1024):", end=" ")
+        print("End port (if not specified, defaults to 1024):", end=" ")
         end_port = input()
         if end_port == "":
             end_port = 1024
@@ -123,7 +123,7 @@ def scan(type):
         start_port = input()
         if start_port == "" or start_port == "0":
             start_port = 1
-        print("End_port (if not specified, defaults to 1024):", end=" ")
+        print("End port (if not specified, defaults to 1024):", end=" ")
         end_port = input()
         if end_port == "":
             end_port = 1024
